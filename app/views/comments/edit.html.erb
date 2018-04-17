@@ -1,0 +1,6 @@
+<h1>Editing Comment</h1>
+
+<%= render 'form_update', comment: @comment %>
+
+<%= link_to 'Show', medium_comment_path(@comment.medium, @comment) %> |
+<%= link_to 'Back', medium_comments_path(@comment.medium) %>

@@ -1,0 +1,11 @@
+  <% @media.each do |medium|%>
+
+    <div class="card text-white bg-info mb-3" style="max-width: 36rem;">
+    <%= link_to image_tag(medium.image_data, class: "card-img-top"), medium_path(medium) %>
+      <div class="card-body">
+        <h5 class="card-title"><%= medium.user.email %></h5>
+        <p class="card-text"><%= medium.description %></p>
+        <p class="card-text"><small class="text-muted"><%= medium.created_at %></small></p>
+      </div>
+    </div>
+  <% end %>

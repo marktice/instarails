@@ -1,0 +1,26 @@
+<div class="container" style="width: 600px;">
+  <p>
+    <%= image_tag @medium.image_data, width: 200 %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @medium.description %>
+  </p>
+
+  <p>
+    <strong>User:</strong>
+    <%= @medium.user.email %>
+  </p>
+
+  <ul>
+  <% @medium.comments.each do |comment| %>
+    <li><%= comment.user.email %>: <%= comment.content %></li>
+  <% end %>
+  </ul>
+
+  <%= link_to 'Comment', new_medium_comment_path(@medium) %>
+
+  <%= link_to 'Edit', edit_medium_path(@medium) %> |
+  <%= link_to 'Back', root_path %>
+</div>

@@ -1,0 +1,8 @@
+<div class="container" style="width: 600px;">
+  <div>
+    <%= link_to 'Post something!', new_medium_path, class:"btn btn-primary btn-lg btn-block" %>
+  </div>
+  <br>
+
+  <%= render 'media/media', media: @media %>
+</div>
